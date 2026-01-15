@@ -1,21 +1,17 @@
-@use '@angular/material' as mat;
+/* App color variables */
+:root {
+  --primary-color: #1c4980;
+  --secondary-color: #383838;
+  --background-color: #f4f6fa;
+}
 
-/* Include core styles */
-@include mat.core();
+/* Optional global resets */
+* {
+  box-sizing: border-box;
+}
 
-/* Define palettes */
-$primary: mat.define-palette(mat.$indigo-palette);
-$accent: mat.define-palette(mat.$blue-palette);
-$warn: mat.define-palette(mat.$red-palette);
-
-/* Define theme */
-$theme: mat.define-light-theme((
-  color: (
-    primary: $primary,
-    accent: $accent,
-    warn: $warn,
-  )
-));
-
-/* Apply theme */
-@include mat.all-component-themes($theme);
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: var(--background-color);
+}
